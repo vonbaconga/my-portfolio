@@ -1,0 +1,298 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: auto; /* Let content decide height */
+  min-height: 100vh; /* At least full screen height */
+}
+.project-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.project-row img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.project-row img:hover {
+    transform: scale(1.05);
+}
+
+/* Lightbox styles */
+#lightbox {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+}
+
+#lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+}
+.image-slider {
+  overflow-x: auto;
+  white-space: nowrap;
+  padding: 10px;
+  background: white;
+  border-radius: 5px;
+}
+
+.image-track {
+  display: flex;
+  gap: 10px;
+}
+
+.image-track img {
+  height: 200px;
+  width: auto;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.image-track img:hover {
+  transform: scale(1.05);
+}
+
+.image-slider::-webkit-scrollbar {
+  display: none;
+}
+.image-slider {
+  position: relative;
+  background: transparent;
+  border-radius: 6px;
+  padding: 6px 40px; /* space for buttons */
+  overflow: hidden;
+}
+
+/* track: horizontally scrollable flexbox with smooth snapping */
+.image-track {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 8px;
+  scroll-snap-type: x mandatory;
+}
+
+/* images: keep entire image visible (no cropping) and keep size consistent */
+.image-track img {
+  flex: 0 0 auto;            /* prevents shrinking */
+  height: 200px;             /* uniform height — change this if you want */
+  width: auto;
+  object-fit: contain;       /* shows whole image without cropping */
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform .50s;
+  scroll-snap-align: center; /* snap to each image */
+  background: #f7f7f7;       /* small neutral background for letterbox */
+}
+
+.image-track img:hover { transform: scale(1.04); }
+
+/* arrows */
+.slide-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.55);
+  color: #fff;
+  border: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  z-index: 20;
+}
+.slide-btn:active { transform: translateY(-50%) scale(.97); }
+.slide-btn.prev { left: 8px; }
+.slide-btn.next { right: 8px; }
+
+/* hide native scrollbar in Webkit but keep native scrolling functional */
+.image-track::-webkit-scrollbar { height: 8px; display: none; }
+
+h1, h2 {
+  text-align: center;
+}
+          .boldonse-regular {
+            font-family: "Boldonse", system-ui;
+            font-weight: 400;
+            font-style: normal;
+          }
+          .merriweather-<uniquifier> {
+            font-family: "Merriweather", serif;
+            font-optical-sizing: auto;
+            font-weight: <weight>;
+            font-style: normal;
+            font-variation-settings:
+              "wdth" 100;
+          }
+.main-title {
+  font-family: 'Boldonse', sans-serif !important; /* Change font style */
+  font-size: 48px;                  /* Change font size */     
+  letter-spacing: 5px;         
+  color: #A6B28B;                      /* Change text color */
+  text-align: center;               /* Center text */
+}
+.sample{
+  font-size: 35px;
+  font-weight: bold;
+  font-family: 'Merriweather', sans-serif !important;
+  text-align: center;
+  letter-spacing: 5px;
+  color: #F5C9B0;
+}
+h2 {
+  font-family: 'Georgia', serif;
+  font-size: 32px;
+  font-weight: normal;
+  color: #1C352D;
+  text-align: left; /* You can use center, right, etc. */
+}
+.about-me{
+  font-family: 'Merriweather', sans-serif !important;
+  font-style: italic;
+  text-align: center;
+  color: #F5C9B0;
+}
+.intro{
+  color: #f4d6c5;
+  text-align: center;
+}
+h3{
+  color: #f4d6c5;
+  font-size: 25px;
+}
+.contact{
+  color: #f4d6c5;
+  text-align: center;
+  font-size: 30px;
+}
+.desc{
+  color: #f4d6c5;
+      }
+      .desc1{
+        color: #f4d6c5;
+        text-align: center;
+}
+.reel{
+  color: #f4d6c5;
+}
+        #contact a {
+    color: rgb(206, 192, 255);
+    text-decoration: none;
+}
+
+#contact a:hover {
+    color: lightgray;
+}
+
+
+.video-container {
+  position: relative;
+  width: 100%;
+  max-width: 800px; /* limit max size */
+  margin: 20px auto; /* center it */
+  aspect-ratio: 16 / 9; /* keeps correct proportions */
+}
+
+.video-container iframe {
+  position: static;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+              .video-portfolio {
+          max-width: 1200px;
+          margin: 0 auto;
+          padding: 20px;
+        }
+
+        .video-portfolio h2 {
+          text-align: center;
+          margin-bottom: 20px;
+        }
+
+        .video-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+          gap: 20px;
+        }
+
+        .video-container {
+          background-color: rgba(0, 0, 0, 0.05);
+          padding: 10px;
+          border-radius: 12px;
+          box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .video-container iframe {
+          width: 100%;
+          aspect-ratio: 16 / 9; /* keeps the correct shape */
+          border-radius: 8px;
+          border: none;
+        }
+
+        .video-container p {
+          margin-top: 8px;
+          text-align: center;
+          font-size: 16px;
+          font-weight: bold;
+}
+
+
+body {
+  background-image: url("Images/bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: scroll; /* follows scroll */
+  position: relative; /* so the overlay positions relative to body */
+}
+
+body::before {
+  content: "";
+  position: fixed; /* fixed so it always covers the viewport */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(70, 104, 64, 0.7); /* adjust transparency */
+  pointer-events: none;
+  z-index: -1; /* keeps it behind everything */
+}
+
+.desc1 {
+    display: flex;
+    gap: 15px; /* space between icons */
+    justify-content: center; /* center horizontally */
+    align-items: center; /* align vertically */
+}
+
+.icon {
+    width: 40px;
+    height: auto;
+    transition: transform 0.2s ease;
+}
+
+.icon:hover {
+    transform: scale(1.1); /* little zoom on hover */
+}

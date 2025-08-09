@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Boldonse&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #F9F6F3;
+        }
+        header {
+            background: #1C352D;
+            padding: 20px 0;
+            text-align: center;
+        }
+        nav a {
+            color: #F5C9B0;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            padding: 20px;
+        }
+        .project {
+            background: #F5C9B0;
+            margin-bottom: 20px;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .project img {
+            max-width: 100%;
+            border-radius: 5px;
+        }
+        footer {
+    text-align: center;
+    padding: 15px;
+    background: #333;
+    color: #F5C9B0;
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="main-title">Von Christian Baconga</h1>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <section id="about">
+            <h2 class="about-me">About Me</h2>
+            <p class="intro">I’m a video editor and multimedia creator with a passion that started back in Junior High School. A graduate of BS Entertainment and Multimedia Computing from West Visayas State University, I specialize in video editing, graphic design, and animation. I’ve worked as a Social Media Manager, Graphic Designer, and Junior Video Editor, using tools like Adobe Premiere Pro, Photoshop, Canva, and CapCut to turn ideas into visuals that connect.</p>
+        </section>
+
+        <section id="projects">
+    <h1 class="sample">Sample Works</h1>
+    <h3>Graphics</h3>
+    <div class="image-slider">
+        <button class="slide-btn prev" aria-label="Previous" onclick="slideLeft()">‹</button>
+
+        <div class="image-track" id="imageTrack">
+            <img src="images/im1.png" alt="Project 1" onclick="openLightbox(this.src)">
+            <img src="images/im2.png" alt="Project 2" onclick="openLightbox(this.src)">
+            <img src="images/im3.png" alt="Project 3" onclick="openLightbox(this.src)">
+            <img src="images/im4.png" alt="Project 4" onclick="openLightbox(this.src)">
+            <img src="images/im5.png" alt="Project 5" onclick="openLightbox(this.src)">
+            <img src="images/im6.png" alt="Project 6" onclick="openLightbox(this.src)">
+            <img src="images/im7.jpg" alt="Project 7" onclick="openLightbox(this.src)">
+            <img src="images/im8.png" alt="Project 8" onclick="openLightbox(this.src)">
+        </div>
+
+        <button class="slide-btn next" aria-label="Next" onclick="slideRight()">›</button>
+</div>
+
+</section>
+
+
+   <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+    <span class="close">&times;</span>
+    <img id="lightbox-img" src="" alt="Large view">
+    </div>  
+    <h3>Videos</h3>
+        <div class="video-container">
+             <iframe width="560" height="315" 
+                src="https://www.youtube.com/embed/VDh1FHEYDe0"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>
+            </iframe>
+        </div>
+        <p class="desc">This is a video about my hometown, Banate. I wanted to share not just the places here, but also some of my own memories and experiences growing up in this town. I filmed it back in 2020 using a borrowed iPhone 6 and edited everything in Adobe Premiere Pro. It’s my first personal project, and it means a lot to me because it’s a simple but honest look at the place I call home.</p>
+</section>
+        </section>
+
+        <section class="video-portfolio">
+        <div class="video-grid">
+            <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/orkqRHI0VTQ" allowfullscreen></iframe>
+            <p class="reel">Reel Practice 1</p>
+            </div>
+            <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/AVP933S3KD4" allowfullscreen></iframe>
+            <p class="reel">Reel Practice 2</p>
+            </div>
+            <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/_Po_Wa1iG2k" allowfullscreen></iframe>
+            <p class="reel">Commercial Video Example</p>
+            </div>
+            <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/XZY0wFab-Z4" allowfullscreen></iframe>
+            <p class="reel">Commercial Video Example</p>
+            </div>
+        </div>
+        </section>
+
+        <section id="contact">
+            <h3 class="contact">Contact</h3>
+            <div class="desc1">
+                     <a href="https://mail.google.com/mail/?view=cm&fs=1&to=vonbaconga@gmail.com" target="_blank">
+                      <img src="images/em.png" alt="Email" style="width:40px; height:auto;" class="icon">
+                    </a>
+                </p>
+               <p class="desc1">
+                 <a href="https://www.linkedin.com/in/vonbaconga" target="_blank">
+                    <img src="images/li.png" alt="LinkedIn" style="width:40px; height:auto;" class="icon">
+                    </a>
+                </p>
+                <p class="desc1">
+                 <a href="https://www.facebook.com/Hyper.Wade" target="_blank">
+                    <img src="images/fb.png" alt="Facebook" style="width:45px; height:auto;" class="icon">
+                    </a>
+                </div>
+         </section>
+
+
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Von Baconga. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
